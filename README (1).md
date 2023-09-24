@@ -23,6 +23,7 @@
 ​
 ## 設計書
 <!--テーマを設定・提出する時点では不要です-->
+[実装機能リスト](https://docs.google.com/spreadsheets/d/1sNHCpaxDkoIWh6EGItKG3ptnY0WlQTe2TkNNdDF7N5c/edit?usp=sharing)
 ​
 ## 開発環境
 - OS：Linux(CentOS)
