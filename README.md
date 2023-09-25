@@ -23,8 +23,9 @@
 ​
 ## 設計書
 <!--テーマを設定・提出する時点では不要です-->
-[実装機能リスト](https://docs.google.com/spreadsheets/d/1sNHCpaxDkoIWh6EGItKG3ptnY0WlQTe2TkNNdDF7N5c/edit?usp=sharing)
-​
+- [実装機能リスト](https://docs.google.com/spreadsheets/d/1sNHCpaxDkoIWh6EGItKG3ptnY0WlQTe2TkNNdDF7N5c/edit?usp=sharing)
+- [顧客画面遷移図](https://drive.google.com/file/d/1BeqNDc95Brs83rk5CMqxZB1wLOnUKurQ/view?usp=sharing)
+
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
