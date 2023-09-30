@@ -26,8 +26,8 @@
 - [実装機能リスト](https://docs.google.com/spreadsheets/d/1sNHCpaxDkoIWh6EGItKG3ptnY0WlQTe2TkNNdDF7N5c/edit?usp=sharing)
 - [顧客：画面遷移図](https://drive.google.com/file/d/10UeLhfeTYe4LfgMDJ6osGhAIR6cGA3L7/view?usp=sharing)
 - [管理者：画面遷移図](https://drive.google.com/file/d/1goOajNwijqB_FhTTRPtcVckF-vCStf7A/view?usp=sharing)
-- [顧客：ワイヤーフレーム](https://drive.google.com/file/d/16zzPJ-Yar9OphBMhvGP8ErOs01RjpJOq/view?usp=sharing)
-- [管理者：ワイヤーフレーム](https://drive.google.com/file/d/1d_8LF0-4Lh-0K67OOJGw8V-U9t7HDZJ4/view?usp=sharing)
+- [顧客：ワイヤーフレーム](https://drive.google.com/file/d/1YsCLgQHuce8b_fCTBVNBLubjsb_lQVrA/view?usp=sharing)
+- [管理者：ワイヤーフレーム](https://drive.google.com/file/d/1FNziPPk9_x8Pj0EhKTn7dHzPxsHsLj0U/view?usp=sharing)
 - [yorozu_car:ER図](https://drive.google.com/file/d/1muwxeDSHMJjGG509NDAP0jyDeWh5wi1K/view?usp=sharing)
 
 ## 開発環境
