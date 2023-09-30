@@ -29,6 +29,7 @@
 - [顧客：ワイヤーフレーム](https://drive.google.com/file/d/1YsCLgQHuce8b_fCTBVNBLubjsb_lQVrA/view?usp=sharing)
 - [管理者：ワイヤーフレーム](https://drive.google.com/file/d/1FNziPPk9_x8Pj0EhKTn7dHzPxsHsLj0U/view?usp=sharing)
 - [yorozu_car:ER図](https://drive.google.com/file/d/1muwxeDSHMJjGG509NDAP0jyDeWh5wi1K/view?usp=sharing)
+- [yorozu_car:テーブル定義書](https://docs.google.com/spreadsheets/d/1c-Rjqw-Sw-oVNzVr5zn-Jh9HX0AxS9lK4b04drKAyPY/edit?usp=sharing)
 
 ## 開発環境
 - OS：Linux(CentOS)
