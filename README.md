@@ -23,7 +23,7 @@
 ​
 ## 設計書
 <!--テーマを設定・提出する時点では不要です-->
-- [実装機能リスト](https://docs.google.com/spreadsheets/d/1sNHCpaxDkoIWh6EGItKG3ptnY0WlQTe2TkNNdDF7N5c/edit?usp=sharing)
+
 - [顧客：画面遷移図](https://drive.google.com/file/d/10UeLhfeTYe4LfgMDJ6osGhAIR6cGA3L7/view?usp=sharing)
 - [管理者：画面遷移図](https://drive.google.com/file/d/1goOajNwijqB_FhTTRPtcVckF-vCStf7A/view?usp=sharing)
 - [顧客：ワイヤーフレーム](https://drive.google.com/file/d/1YsCLgQHuce8b_fCTBVNBLubjsb_lQVrA/view?usp=sharing)
