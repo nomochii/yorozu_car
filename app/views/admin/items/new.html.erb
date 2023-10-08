@@ -6,6 +6,7 @@
   <%= form_with model: @newitem, url: admin_items_path do |f| %>
     <div>
       商品画像
+      <!--画像のみ投稿可能にしてます。-->
       <%= f.file_field :image, accept: "image/*" %>
     </div>
     <div>
@@ -13,8 +14,24 @@
       <%= f.text_field :product_name %>
     </div>
     <div>
-      商品説明
-      <%= f.text_area :introduction %>
+      年式
+      <%= f.text_area :year %>
+    </div>
+    <div>
+      走行
+      <%= f.text_area :mileage %>
+    </div>
+    <div>
+      車検
+      <%= f.text_area :inspection %>
+    </div>
+    <div>
+      修復
+      <%= f.text_area :repair %>
+    </div>
+    <div>
+      整備
+      <%= f.text_area :maintenance %>
     </div>
     <div>
       税抜価格
