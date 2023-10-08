@@ -7,7 +7,7 @@ class Public::CustomersController < ApplicationController
 
 # 顧客マイページ編集
   def edit
-
+    @customer = current_customer
   end
 
 # 顧客マイページ変更更新
