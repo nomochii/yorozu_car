@@ -12,7 +12,9 @@ class Public::CustomersController < ApplicationController
 
 # 顧客マイページ変更更新
   def update
-
+    @customer = current_customer
+    @customer.update(customer_params)
+    redirect_to customers_my_page_path
   end
 
 # 顧客退会確認画面
