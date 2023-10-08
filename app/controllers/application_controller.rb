@@ -4,21 +4,21 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 private
+# 管理者ログイン後の遷移先
 def after_sign_in_path_for(resource_or_scope)
   if resource_or_scope.is_a?(Admin)
+    # 管理者用のトップページ（注文履歴一覧）
         admin_path
-  else
-        root_path
   end
 end
-
+# ログアウト後の遷移先
 def after_sign_out_path_for(resource_or_scope)
+  # 顧客側・・トップページ
   if resource_or_scope == :customer
         root_path
+  # 管理者側・・# 管理者ログイン画面
   elsif resource_or_scope == :admin
         new_admin_session_path
-  else
-        root_path
   end
 end
 
