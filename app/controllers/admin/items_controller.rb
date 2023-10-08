@@ -1,12 +1,16 @@
 class Admin::ItemsController < ApplicationController
-  # 画像投稿の画面を表示
+  # 商品投稿の画面を表示
   def new
     # form_with に渡すための「空のモデル」代入
     @newitem = Item.new
   end
 
+  # 投稿データの保存
   def create
-
+    # ITEMモデルに紐づくデータとして保存する準備(パラメーターのデータを@newitemに格納)
+    @newitem = Item.new(item_params)
+    # データ保存
+    @newitem.save
   end
 
   def index
@@ -41,7 +45,7 @@ class Admin::ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :product_name, :introduction, :price)
+    params.require(:item).permit(:image, :product_name, :year, :mileage, :inspection, :repair, :maintenance, :price)
   end
 end
 
