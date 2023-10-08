@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # マイページ
   get "customers/my_page" => "customers#show"
   resources :customers, only: [:edit, :update]
+  # 退会確認画面
+  get  '/customers/unsubscribe' => 'customers#unsubscribe'
  end
 
  # 顧客ログイン・新規登録
