@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   root to: "homes#top"
   # 会社概要
   get "company_profile" => "homes#company_profile", as: "company_profile"
+  # マイページ
   get "customers/my_page" => "customers#show"
-  resources :customers, only: [:edit, :update, :index]
+  resources :customers, only: [:edit, :update]
   # 顧客用
  end
 
