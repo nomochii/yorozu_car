@@ -1,0 +1,25 @@
+<div class="admin_newitem_title">
+  <h1>商品新規登録</h1>
+</div>
+
+<div class="admin_newitem">
+  <%= form_with model: @newitem, url: admin_items_path do |f| %>
+    <div>
+      商品画像
+      <%= f.file_field :image, accept: "image/*" %>
+    </div>
+    <div>
+      商品名
+      <%= f.text_field :product_name %>
+    </div>
+    <div>
+      商品説明
+      <%= f.text_area :introduction %>
+    </div>
+    <div>
+      税抜価格
+      <%= f.text_area :price %>円
+    </div>
+    <%= f.submit '新規登録' %>
+  <% end %>
+</div>

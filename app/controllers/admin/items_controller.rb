@@ -1,31 +1,33 @@
 class Admin::ItemsController < ApplicationController
+  # 画像投稿の画面を表示
   def new
-    
+    # form_with に渡すための「空のモデル」代入
+    @newitem = Item.new
   end
 
   def create
-    
+
   end
 
   def index
-    
+
   end
 
 
   def edit
-    
+
   end
 
   def show
-    
+
   end
 
   def destroy
-    
+
   end
 
   def update
-    
+
   end
 
   def get_image
