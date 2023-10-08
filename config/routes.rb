@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
 # （（管理者用））
   namespace :admin do
+  # 管理者トップページ（注文履歴一覧）
+  get "admin" => "homes#top", as: "/"
   # 商品
   resources :items, only: [:show, :edit, :update, :index, :new, :create]
   end
