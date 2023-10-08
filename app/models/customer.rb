@@ -4,6 +4,9 @@ class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+          has_many :cart_items, dependent: :destroy
+          has_many :orders, dependent: :destroy
+
   def self.guest
     # 一致するレコードをデータベースから探し、見つからなかった場合に新しいレコードを作成。
     find_or_create_by!(first_name: '名無し', last_name: '権兵衛', first_name_kana: 'ナナシ', last_name_kana: 'ゴンベエ', email: 'guest@example.com', postal_code: '1102373', address: '福岡県高山市川野区田原3-72', telephone_number: '0901765') do |customer|
