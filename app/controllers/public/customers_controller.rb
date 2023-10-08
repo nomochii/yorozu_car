@@ -8,7 +8,6 @@ class Public::CustomersController < ApplicationController
 # 顧客マイページ編集
   def edit
     @customer = current_customer
-
   end
 
 # 顧客マイページ変更更新
@@ -26,5 +25,7 @@ class Public::CustomersController < ApplicationController
 
   end
 
-
+  def customer_params
+    params.require(:customer).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :address, :telephone_number, :email, :is_deleted)
+  end
 end
