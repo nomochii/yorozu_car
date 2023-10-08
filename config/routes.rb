@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :customers, only: [:edit, :update]
   # 退会確認画面
   get  '/customers/unsubscribe' => 'customers#unsubscribe'
+  # 退会処理（論理削除用）
+  patch  '/customers/withdraw' => 'customers#withdraw'
  end
 
  # 顧客ログイン・新規登録
