@@ -16,9 +16,9 @@ class Admin::ItemsController < ApplicationController
   def index
     @admin = current_admin
     # Adminテーブル内に存在する全てのレコードのインスタンスを代入
-    @admin = Admin.all
+    @admin = Admin.page(params[:page])
     # Itemテーブル内に存在する全てのレコードのインスタンスを代入
-    @items = Item.all
+    @items = Item.page(params[:page])
     @newitem = Item.new
 
   end
@@ -29,7 +29,9 @@ class Admin::ItemsController < ApplicationController
   end
 
   def show
-
+    @item = Item.find(params[:id])
+    @items = Item.all
+    @newitem = Item.new
   end
 
   def destroy
