@@ -14,6 +14,12 @@ class Admin::ItemsController < ApplicationController
   end
 
   def index
+    @admin = current_admin
+    # Adminテーブル内に存在する全てのレコードのインスタンスを代入
+    @admin = Admin.all
+    # Itemテーブル内に存在する全てのレコードのインスタンスを代入
+    @items = Item.all
+    @newitem = Item.new
 
   end
 
@@ -34,6 +40,7 @@ class Admin::ItemsController < ApplicationController
 
   end
 
+  # 画像が設定されない場合はno_image.jpgをデフォルト画像として表示する
   def get_image
     unless image.attached?
       file_path = Rails.root.join('app/assets/images/no_image.jpg')

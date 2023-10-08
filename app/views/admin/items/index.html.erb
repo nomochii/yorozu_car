@@ -1,0 +1,35 @@
+<div class="admin_index_title">
+  <h1>商品一覧</h1>
+</div>
+
+<div class="admin_index_newitem_btn">
+  <%= link_to new_admin_item_path, class: "btn btn-danger text-white", method: :get do %>
+    <i class="fa-solid fa-plus"></i>
+  <% end %>
+</div>
+<div class="admin_index">
+  <table border="1" rules="rows">
+    <thead>
+      <tr>
+        <th>商品ID</th>
+        <th width="300" height="60">商品名</th>
+        <th width="300" height="60">税抜価格</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @items.each do |item| %>
+        <tr>
+         <td><%= item.id %></td>
+          <td>
+            <%= link_to item.product_name, admin_item_path(item.id) %>
+          </td>
+          <td><%= item.price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="admin_index_pagination">
+    <%#= paginate @items %>
+  </div>
+</div>
