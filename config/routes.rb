@@ -26,9 +26,13 @@ Rails.application.routes.draw do
   end
 
 # （（管理者用））
+  namespace :admin do
+  # 商品
+  resources :items, only: [:show, :edit, :update, :index, :new, :create]
   # 管理者ログイン
   devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
     sessions: "admin/sessions"
   }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  end
 end
