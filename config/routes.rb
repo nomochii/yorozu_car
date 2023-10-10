@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-# （（顧客用））
-  # トップ画面
 
+# （（顧客用））
   scope module: :public do
+  # トップ画面
   root to: "homes#top"
   # 会社概要
   get "company_profile" => "homes#company_profile", as: "company_profile"
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get  '/customers/unsubscribe' => 'customers#unsubscribe'
   # 退会処理（論理削除用）
   patch  '/customers/withdraw' => 'customers#withdraw'
+  # 商品
+  resources :items, only: [:show, :index]
  end
 
  # 顧客ログイン・新規登録
@@ -24,6 +26,8 @@ Rails.application.routes.draw do
   devise_scope :customer do
   post 'customer/guest_sign_in', to: 'public/sessions#guest_sign_in'
   end
+
+
 
 # （（管理者用））
   namespace :admin do
