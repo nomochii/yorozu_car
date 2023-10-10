@@ -6,13 +6,13 @@ class CreateItems < ActiveRecord::Migration[6.1]
       # 年式
       t.integer :year, null: false
       # 走行
-      t.float :mileage, null: false
+      t.string :mileage, null: false
       # 車検
-      t.integer :inspection, null: false
+      t.string :inspection, null: false
       # 修理
-      t.integer :repair, null: false
+      t.string :repair, null: false
       # 整備
-      t.integer :maintenance, null: false
+      t.string :maintenance, null: false
       # 税抜価格
       t.integer :price, null: false
       # 登録・更新日時

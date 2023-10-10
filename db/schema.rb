@@ -83,10 +83,10 @@ ActiveRecord::Schema.define(version: 2023_10_07_110340) do
   create_table "items", force: :cascade do |t|
     t.string "product_name", null: false
     t.integer "year", null: false
-    t.float "mileage", null: false
-    t.integer "inspection", null: false
-    t.integer "repair", null: false
-    t.integer "maintenance", null: false
+    t.string "mileage", null: false
+    t.string "inspection", null: false
+    t.string "repair", null: false
+    t.string "maintenance", null: false
     t.integer "price", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
