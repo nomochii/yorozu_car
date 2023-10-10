@@ -1,0 +1,19 @@
+<div class="admin_item_edit_titl">
+  <h1>商品編集</h1>
+</div>
+<div class="admin_item_edit">
+  <%= form_with model: @item, url: admin_item_path(@item.id), method: :patch do |f| %>
+    <table>
+      <tr><th width="100" height="60">商品画像</th><td><%= f.file_field :image, accept: "image/*" %></td></tr>
+      <tr><th width="100" height="60">商品名</th><td><%= f.text_field :product_name %></td></tr>
+      <tr><th width="100" height="60">年式</th><td><%= f.text_area :year %></td></tr>
+      <tr><th width="100" height="60">走行</th><td><%= f.text_area :mileage %></td></tr>
+      <tr><th width="100" height="60">車検</th><td><%= f.text_area :inspection %></td></tr>
+      <tr><th width="100" height="60">修復</th><td><%= f.text_area :repair %></td></tr>
+      <tr><th width="100" height="60">整備</th><td><%= f.text_area :maintenance %></td></tr>
+    </table>
+    <div class="save_changes_btn">
+      <%= f.submit '変更を保存' %>
+    </div>
+  <% end %>
+</div>
