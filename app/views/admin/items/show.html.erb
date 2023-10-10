@@ -15,12 +15,12 @@
     <div class="col-6">
       <table>
         <tr><th width="100" height="60">商品名</th><td><%= @item.product_name %></td></tr>
-        <tr><th width="100" height="60">年式</th><td><%= @item.year %></td></tr>
-        <tr><th width="100" height="60">走行</th><td><%= @item.mileage %></td></tr>
+        <tr><th width="100" height="60">年式</th><td><%= @item.year %>年</td></tr>
+        <tr><th width="100" height="60">走行</th><td><%= @item.mileage %>万km</td></tr>
         <tr><th width="100" height="60">車検</th><td><%= @item.inspection %></td></tr>
         <tr><th width="100" height="60">修復</th><td><%= @item.repair %></td></tr>
         <tr><th width="100" height="60">整備</th><td><%= @item.maintenance %></td></tr>
-        <tr><th width="100" height="60">税抜価格<p>（税込価格）</p></th><td><%= @item.price %>（<%= @item.add_tax_price.to_s(:dalimited) %>）円</td></tr>
+        <tr><th width="100" height="60">税抜価格<p>（税込価格）</p></th><td><%= @item.price %>円 <p>（<%= @item.add_tax_price.to_s(:dalimited) %>）円</p></td></tr>
       </table>
     </div>
   </div>
