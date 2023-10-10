@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="item_show_img">
+        <div><%= image_tag @item.image, size: "300x300" %></div>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <h2><%= @item.product_name %></h2>
+      <div class="item_show_explain">
+        <div><%= @item.year %>年</div>
+      </div>
+      <div><%= @item.mileage %>万km</div>
+      <div><%= @item.inspection %></div>
+      <div><%= @item.repair %></div>
+      <div><%= @item.maintenance %></div>
+      <div class="item_show_price">
+        <div>¥<%= @item.add_tax_price.to_s(:dalimited) %>(税込）</div>
+      </div>
+    </div>
+  </div>
+</div>
