@@ -55,7 +55,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# ユーザー認証機能
 gem 'devise'
 
 # ページネーション用
 gem 'kaminari','~> 1.2.1'
+
+# 数値に意味を持たせることができるもの
+gem "enum_help"
