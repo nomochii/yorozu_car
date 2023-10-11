@@ -4,17 +4,28 @@ Rails.application.routes.draw do
   scope module: :public do
   # トップ画面
   root to: "homes#top"
+
   # 会社概要
   get "company_profile" => "homes#company_profile", as: "company_profile"
+
   # マイページ
   get "customers/my_page" => "customers#show"
   resources :customers, only: [:edit, :update]
+
   # 退会確認画面
   get  '/customers/unsubscribe' => 'customers#unsubscribe'
+
   # 退会処理（論理削除用）
   patch  '/customers/withdraw' => 'customers#withdraw'
+
   # 商品
   resources :items, only: [:show, :index]
+
+  # カート内商品全て削除
+  delete "cart_items/destroy_all"=> "cart_items#destroy_all"
+
+  # カート内商品
+  resources :cart_items, only: [:index, :update, :destroy, :create]
  end
 
  # 顧客ログイン・新規登録
