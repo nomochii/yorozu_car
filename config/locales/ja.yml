@@ -1,9 +1,16 @@
+# 日本語の設定を行う
 ja:
+  # enumの設定を行う
   enums:
+    # モデル名
     order:
+      # カラム名
       payment_method:
+        # enumで番号と紐付けた要素
         credit_card: "クレジットカード"
+        # enumで番号と紐付けた要素
         transfer: "銀行振込"
+
   activerecord:
     errors:
       messages:
