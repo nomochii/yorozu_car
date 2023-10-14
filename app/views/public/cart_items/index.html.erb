@@ -31,3 +31,12 @@
     <% end %>
   </tbody>
 </table>
+
+<table>
+  <thead>
+    <tr>
+      <th width="100" height="60">合計金額</th>
+      <th><%= @total.round.to_s(:delimited)%></th>
+    </tr>
+  </thead>
+</table>
