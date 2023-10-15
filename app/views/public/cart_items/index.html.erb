@@ -32,6 +32,7 @@
             </td>
             <!--小計はcart_itemモデルにメソッド作成してます。-->
             <td><%= cart_item.subtotal.to_s(:dalimited) %></td>
+            <td><%= link_to "削除", cart_item_path(cart_item.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: 'btn btn-danger' %></td>
           </tr>
         <% end %>
       </tbody>

@@ -2,7 +2,7 @@ class Public::CartItemsController < ApplicationController
 
   def index
     @cart_items = current_customer.cart_items
-    # 合計金額
+    # カート内の合計金額
     @total = @cart_items.inject(0) { |sum, item| sum + item.subtotal }
   end
 
@@ -10,6 +10,11 @@ class Public::CartItemsController < ApplicationController
   end
 
   def destroy
+    @cart_item = CartItem.find(params[:id]) # データ（レコード）を1件取得
+    @cart_item.destroy # データ（レコード）を削除
+    @cart_items = CartItem.all# 削除後のカート内全件取得
+    @total = @cart_items.inject(0) { |sum, item| sum + item.subtotal }# 削除後のカート内の合計
+    redirect_to cart_items_path
   end
 
   def destroy_all
