@@ -26,6 +26,15 @@ Rails.application.routes.draw do
 
   # カート内商品
   resources :cart_items, only: [:index, :update, :destroy, :create]
+
+  # 注文情報確認画面
+  post "orders/confirm"=> "orders#confirm"
+
+  # 注文完了画面
+  get "orders/complete"=> "orders#complete"
+
+  # 注文
+  resources :orders, only: [:new, :create, :index, :show]
  end
 
  # 顧客ログイン・新規登録
