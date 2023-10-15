@@ -1,4 +1,7 @@
 class Public::CartItemsController < ApplicationController
+  #https://qiita.com/tobita0000/items/866de191635e6d74e392#user_session
+  # 上記を参考に、ログイン済ユーザーのみにアクセスを許可してます。
+  before_action :authenticate_customer!
 
   def index
     @cart_items = current_customer.cart_items
