@@ -1,6 +1,11 @@
 class Public::OrdersController < ApplicationController
 
   def new
+     @cart_items = current_customer.cart_items
+    if @cart_items == []
+      redirect_to root_path
+    end
+    @order = Order.new
   end
 
   def create

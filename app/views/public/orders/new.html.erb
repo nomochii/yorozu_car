@@ -1,0 +1,25 @@
+<h1>注文情報入力</h1>
+
+<%= form_with model: @order, url: "/orders/confirm",method: :post, local: true do |f| %>
+
+  <h2>支払方法</h2>
+  <div class="payment">
+    <%= f.radio_button :payment_method, Order.payment_methods.key(0),checked: true %>
+    <%= f.label :payment_method_credit_card, Order.payment_methods_i18n[:credit_card] %>
+
+    <%= f.radio_button :payment_method, Order.payment_methods.key(1) %>
+    <%= f.label :payment_method_transfer, Order.payment_methods_i18n[:transfer] %>
+  </div>
+
+  <h2>お届け先</h2>
+  <div class="addressee">
+    <div>〒<%= current_customer.postal_code %>
+          <%= current_customer.address %>
+    </div>
+    <div><%= current_customer.first_name %><%= current_customer.last_name %></div>
+  </div>
+  <div class="confirmation_btn">
+    <%= f.submit "確認画面へ進む" %>
+  </div>
+
+<% end %>
