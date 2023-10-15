@@ -3,6 +3,11 @@
     <div class="col-6">
       <h1>ショッピングカート</h1>
     </div>
+    <div class="col-6">
+      <div class="destroy_all_btn">
+        <%= link_to "カートを空にする", cart_items_destroy_all_path, method: :delete, "data-confirm" => "本当に空にしますか？", class: 'btn btn-danger' %>
+      </div>
+    </div>
   </div>
   <div class="row">
     <table border="1">

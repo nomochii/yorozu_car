@@ -22,6 +22,9 @@ class Public::CartItemsController < ApplicationController
   end
 
   def destroy_all
+    @cart_items_all = current_customer.cart_items# 自分のカートアイテムデータ（レコード）だけを取得
+    @cart_items_all.destroy_all# 自分のカートアイテムデータ（レコード）だけを全件削除
+    redirect_to cart_items_path
   end
 
   def create
