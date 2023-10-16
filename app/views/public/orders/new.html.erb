@@ -4,10 +4,14 @@
 
   <h2>支払方法</h2>
   <div class="payment">
+    <!--クレジットカードのラジオボタンにデフォルトでチェックが入った状態にしてます。-->
     <%= f.radio_button :payment_method, Order.payment_methods.key(0),checked: true %>
+    <!--クレジットカードのラベル-->
     <%= f.label :payment_method_credit_card, Order.payment_methods_i18n[:credit_card] %>
 
+    <!--銀行振込のラジオボタン-->
     <%= f.radio_button :payment_method, Order.payment_methods.key(1) %>
+    <!--銀行振込のラベル-->
     <%= f.label :payment_method_transfer, Order.payment_methods_i18n[:transfer] %>
   </div>
 
