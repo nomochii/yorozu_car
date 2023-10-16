@@ -33,6 +33,7 @@ class Public::OrdersController < ApplicationController
   end
 
   def index
+    @orders = current_customer.orders.all
   end
 
   # new 画面から渡ってきたデータをユーザーに確認してもらう
