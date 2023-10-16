@@ -9,6 +9,27 @@ class Public::OrdersController < ApplicationController
   end
 
   def create
+    # 確認画面から送られてきた情報を取得
+    order = Order.new(order_params)
+    order.customer_id = current_customer.id
+    # Orderモデルに注文を保存
+    order.save
+    @cart_items = current_customer.cart_items.all
+
+    @cart_items.each do |cart_item|
+      # カート内商品の情報をすべて取得し１つずつ格納する必要があります。
+      @order = OrderDetail.new
+      @order.order_id = order.id
+      @order.item_id = cart_item.item.id
+      @order.amount = cart_item.amount
+      # 購入時価格
+      @order.purchase_price = cart_item.item.price * 1.1
+      # # OrderDetailモデルにカート内商品の情報をもとに保存。
+      @order.save!
+    end
+      # カート内商品を全てOrderDetailモデルに格納し終わると、カート内商品を全て削除します。
+      @cart_items.destroy_all
+      redirect_to orders_complete_path
   end
 
   def index
@@ -38,8 +59,9 @@ class Public::OrdersController < ApplicationController
   end
 
   private
-    def order_params
+
+  def order_params
     params.require(:order).permit(:shipping_postal_code, :shipping_address, :shipping_name, :payment_method, :customer_id, :total_amount, :postage )
-    end
+  end
 
 end
