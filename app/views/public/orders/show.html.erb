@@ -65,6 +65,7 @@
             <td width="500" height="50"><%= order_detail.item.product_name %></td>
             <td width="50" height="50"><%= order_detail.purchase_price %></td>
             <td width="50" height="50"><%= order_detail.amount %></td>
+            <!--subtotalはorder_detailモデルに定義してます。-->
             <td width="100" height="50"><%= order_detail.subtotal%></td>
           </tr>
         <% end %>

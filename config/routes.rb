@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 # （（顧客用））
   scope module: :public do
+
   # トップ画面
   root to: "homes#top"
 
@@ -42,6 +43,7 @@ Rails.application.routes.draw do
     registrations: "public/registrations",
     sessions: 'public/sessions'
   }
+
   # 顧客用ゲストログイン
   devise_scope :customer do
   post 'customer/guest_sign_in', to: 'public/sessions#guest_sign_in'
@@ -51,11 +53,17 @@ Rails.application.routes.draw do
 
 # （（管理者用））
   namespace :admin do
+
   # 管理者トップページ（注文履歴一覧）
   get "admin" => "homes#top", as: "/"
+
   # 商品
   resources :items, only: [:show, :edit, :update, :index, :new, :create]
+
+  # 顧客
+  resources :customers, only: [:show, :edit, :update, :index]
   end
+
   # 管理者ログイン
   devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
     sessions: "admin/sessions"
