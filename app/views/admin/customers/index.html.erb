@@ -1,0 +1,35 @@
+<div class="admin_user_index_titl">
+  <h1>会員一覧</h1>
+</div>
+<div class="admin_user_index">
+  <table border="1" rules="rows">
+    <thead>
+      <tr>
+        <th width="130" height="60">会員ID</th>
+        <th width="130" height="60">氏名</th>
+        <th width="130" height="60">メールアドレス</th>
+        <th width="130" height="60">ステータス</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.id %></td>
+          <td>
+            <%= link_to customer.first_name , admin_customer_path(customer.id) %>
+            <%= link_to customer.last_name , admin_customer_path(customer.id) %>
+          </td>
+          <td><%= customer.email %></td>
+          <td>
+            <% if customer.is_deleted?%>
+              退会
+            <%else%>
+              有効
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
