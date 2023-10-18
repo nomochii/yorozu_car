@@ -62,6 +62,9 @@ Rails.application.routes.draw do
 
   # 顧客
   resources :customers, only: [:show, :edit, :update, :index]
+
+  # 注文
+  resources :orders, only:[:show]
   end
 
   # 管理者ログイン
