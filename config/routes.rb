@@ -46,7 +46,7 @@ Rails.application.routes.draw do
 
   # 顧客用ゲストログイン
   devise_scope :customer do
-  post 'customer/guest_sign_in', to: 'public/sessions#guest_sign_in'
+  post 'customers/guest_sign_in', to: 'public/sessions#guest_sign_in'
   end
 
 

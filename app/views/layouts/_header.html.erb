@@ -17,7 +17,7 @@
       <li><%= link_to "商品一覧", items_path, class: 'btn btn-light' %></li>
       <li><%= link_to "新規登録", new_customer_registration_path, class: 'btn btn-light' %></li>
       <li><%= link_to "ログイン", new_customer_session_path, class: 'btn btn-light' %></li>
-      <li><%= link_to "ゲストログイン（閲覧用）", customer_guest_sign_in_path, class: 'btn btn-light', method: :post %></li>
+      <li><%= link_to "ゲストログイン（閲覧用）", customers_guest_sign_in_path, class: 'btn btn-light', method: :post %></li>
     <% end %>
   </ul>
 </header>
