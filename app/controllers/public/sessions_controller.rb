@@ -3,6 +3,13 @@
 class Public::SessionsController < Devise::SessionsController
   before_action :configure_permitted_parameters, only: [:create]
 
+ # ゲストログイン用
+  def guest_sign_in
+    customer = Customer.guest
+    sign_in customer
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
+
   protected
     # 退会しているかを判断するメソッド
     def customer_state
@@ -17,13 +24,6 @@ class Public::SessionsController < Devise::SessionsController
         render :create
       end
     end
-
-  # ゲストログイン用
-  def guest_sign_in
-    customer = Customer.guest
-    sign_in customer
-    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
-  end
 
   def after_sign_in_path_for(resource)
       root_path
