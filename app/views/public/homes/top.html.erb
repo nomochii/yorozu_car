@@ -1,5 +1,12 @@
 <h1>車屋よろず</h1>
 <p>このサイトは中古車のECサイトになります。</br>
     購入には会員登録が必要になります。</p>
-
 <h3>新着商品</h3>
+  <% @items.each do |item| %>
+    <%= link_to item_path(item.id) do %>
+      <%= image_tag item.image, size: "200x200" %>
+    <% end %>
+<p><%= link_to item.product_name,item_path(item.id) %></p>
+<p>¥<%= link_to item.price,item_path(item.id) %></p>
+  <% end %>
+<span><%= link_to "全ての商品を見る>", items_path %></span>
