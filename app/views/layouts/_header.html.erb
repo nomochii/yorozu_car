@@ -1,6 +1,8 @@
 <header>
+  <!--管理者がログインしている場合は管理者用のトップページ（注文履歴一覧）-->
   <% if admin_signed_in? %>
     <%= link_to "TOPページ", admin_path, class: "fa-solid fa-car-side" %>
+  <!--顧客がログインしている場合は顧客用のトップページ-->
   <% else %>
     <%= link_to "TOPページ", root_path, class: "fa-solid fa-car-side" %>
   <% end %>
