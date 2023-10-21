@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  # 顧客ログイン・新規登録
+  devise_for :customers,skip: [:passwords], controllers: {
+    registrations: "public/registrations",
+    sessions: 'public/sessions'
+  }
+
+  # 顧客用ゲストログイン
+  devise_scope :customer do
+  post 'customers/guest_sign_in', to: 'public/sessions#guest_sign_in'
+  end
+
+
 # （（顧客用））
   scope module: :public do
 
@@ -11,13 +23,15 @@ Rails.application.routes.draw do
 
   # マイページ
   get "customers/my_page" => "customers#show"
-  resources :customers, only: [:edit, :update]
 
   # 退会確認画面
   get  '/customers/unsubscribe' => 'customers#unsubscribe'
 
   # 退会処理（論理削除用）
   patch  '/customers/withdraw' => 'customers#withdraw'
+
+  # 顧客
+  resources :customers, only: [:edit, :update]
 
   # 商品
   resources :items, only: [:show, :index]
@@ -36,20 +50,13 @@ Rails.application.routes.draw do
 
   # 注文
   resources :orders, only: [:new, :create, :index, :show]
- end
-
- # 顧客ログイン・新規登録
-  devise_for :customers,skip: [:passwords], controllers: {
-    registrations: "public/registrations",
-    sessions: 'public/sessions'
-  }
-
-  # 顧客用ゲストログイン
-  devise_scope :customer do
-  post 'customers/guest_sign_in', to: 'public/sessions#guest_sign_in'
   end
 
 
+   # 管理者ログイン
+  devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
+    sessions: "admin/sessions"
+  }
 
 # （（管理者用））
   namespace :admin do
@@ -67,9 +74,5 @@ Rails.application.routes.draw do
   resources :orders, only:[:show]
   end
 
-  # 管理者ログイン
-  devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
-    sessions: "admin/sessions"
-  }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
