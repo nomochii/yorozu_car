@@ -71,7 +71,7 @@ Rails.application.routes.draw do
   resources :customers, only: [:show, :edit, :update, :index]
 
   # 注文
-  resources :orders, only:[:show]
+  resources :orders, only:[:show, :index]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
