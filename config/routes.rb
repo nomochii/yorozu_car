@@ -61,17 +61,21 @@ Rails.application.routes.draw do
 # （（管理者用））
   namespace :admin do
 
-  # 管理者トップページ（注文履歴一覧）
-  get "admin" => "homes#top", as: "/"
+    # 管理者トップページ（注文履歴一覧）
+    get "admin" => "homes#top", as: "/"
 
-  # 商品
-  resources :items, only: [:show, :edit, :update, :index, :new, :create]
+    # 商品
+    resources :items, only: [:show, :edit, :update, :index, :new, :create]
 
-  # 顧客
-  resources :customers, only: [:show, :edit, :update, :index]
+    # 顧客
+    resources :customers, only: [:show, :edit, :update, :index] do
+      member do
+        get :orders
+      end
+    end
 
-  # 注文
-  resources :orders, only:[:show, :index]
+    # 注文
+    resources :orders, only:[:show]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

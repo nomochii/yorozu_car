@@ -21,6 +21,12 @@ class Admin::CustomersController < ApplicationController
     end
   end
 
+  def orders
+    @customer = Customer.find(params[:id])
+    @orders = @customer.orders
+    render "admin/orders/index"
+  end
+
  private
 
   def customer_params
