@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>YorozuCar</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <!--Font Awesome導入-->
-    <script src="https://kit.fontawesome.com/7b9101ce5e.js" crossorigin="anonymous"></script>
+<html lang="ja">
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <head>
+    <meta charset="UTF-8"/>
+      <title>YorozuCar</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <!--Font Awesome導入-->
+    <script src="https://kit.fontawesome.com/7b9101ce5e.js" crossorigin="anonymous"></script>
+      <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render "layouts/header" %>
+    <!--フラッシュメッセージを表示させてます。-->
     <%= notice %>
     <%= yield %>
+    <div class="footer">
+      <p>CopyRight YorozuCar.inc</p>
+    </div>
   </body>
 </html>
