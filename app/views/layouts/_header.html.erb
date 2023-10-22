@@ -10,6 +10,7 @@
     <ul>
       <% if customer_signed_in? %>
         <!--顧客がログインしている時　-->
+        <div class="welcome">ようこそ、<%= current_customer.first_name %>さん！</div>
         <li><%= link_to 'マイページ', customers_my_page_path, class: 'btn btn-light' %></li>
         <li><%= link_to "商品一覧", items_path, class: 'btn btn-light' %></li>
         <li><%= link_to "カート", cart_items_path, class: 'btn btn-light' %></li>
