@@ -69,12 +69,13 @@ Rails.application.routes.draw do
 
     # 顧客
     resources :customers, only: [:show, :edit, :update, :index] do
+      # 顧客別の注文履歴一覧
       member do
         get :orders
       end
     end
 
-    # 注文
+    # 注文履歴詳細
     resources :orders, only:[:show]
   end
 
