@@ -1,12 +1,32 @@
-<h1>車屋よろず</h1>
-<p>このサイトは中古車のECサイトになります。</br>
-    購入には会員登録が必要になります。</p>
-<h3>新着商品</h3>
-  <% @items.each do |item| %>
-    <%= link_to item_path(item.id) do %>
-      <%= image_tag item.image, size: "200x200" %>
+<div class="container">
+  <div class="row">
+    <%= image_tag 'futari.png', size: "400x300" %>
+    <h1 class="top_title">車屋よろず</h1>
+    <p class="top_text">このサイトは中古車のECサイトになります。</br>
+      購入には会員登録が必要になります。</p>
+  </div>
+
+  <div class="row">
+    <h2 class="new_products_text"><< 新着商品 >></h2>
+  </div>
+  <div class="row">
+    <% @items.each do |item| %>
+      <div class="col-3">
+        <div>
+          <%= link_to item_path(item.id) do %>
+            <%= image_tag item.image, size: "200x200" %>
+          <% end %>
+        </div>
+        <div class="row">
+          <p><%= link_to item.product_name,item_path(item.id) %></p>
+        </div>
+        <div class="row">
+          <p>¥<%= link_to item.price,item_path(item.id) %></p>
+        </div>
+      </div>
     <% end %>
-<p><%= link_to item.product_name,item_path(item.id) %></p>
-<p>¥<%= link_to item.price,item_path(item.id) %></p>
-  <% end %>
-<span><%= link_to "全ての商品を見る>", items_path %></span>
+  </div>
+  <div class="top_link">
+    <span><%= link_to "全ての商品を見る>", items_path %></span>
+  </div>
+</div>

@@ -50,3 +50,31 @@ li {
 .registration{
   margin: 0 0 0 350px;
 }
+
+// 顧客トップページ
+.top_image {
+  margin: 0 0 0 400px;
+  position: relative;
+}
+
+.top_title {
+  font-size: 100px;
+}
+
+.top_text {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  color: #FF69B4;
+}
+
+.new_products_text {
+  margin: 0 0 0 400px;
+}
+
+.top_link {
+  margin-right: 0;
+  margin-left: auto;
+  width: 30%;
+  display: block;
+}
