@@ -37,6 +37,8 @@ li {
   margin: 0 0 0 20px;
 }
 
+              // （（顧客側の画面））
+
 // 顧客ログイン画面
 .login{
   text-align: center;
@@ -198,4 +200,16 @@ li {
 
 .order_details_show {
   margin: 0 0 50px 150px;
+}
+
+
+              // （（管理者側の画面））
+
+// 管理者ログイン
+.admin_login_title {
+   margin: 0 0 0 80px;
+}
+
+.admin_login {
+   text-align: center;
 }
