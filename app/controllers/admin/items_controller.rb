@@ -11,6 +11,7 @@ class Admin::ItemsController < ApplicationController
     @newitem = Item.new(item_params)
     # データ保存
     @newitem.save
+    redirect_to admin_item_path(@newitem.id)
   end
 
   def index
