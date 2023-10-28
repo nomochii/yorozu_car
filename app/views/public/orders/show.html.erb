@@ -34,15 +34,15 @@
         <thead>
           <tr>
             <th>商品合計</th>
-              <td width="200" height="50"><%=  @order.total_amount - @order.postage %></td>
+              <td width="200" height="50"><%=  number_with_delimiter(@order.total_amount - @order.postage) %></td>
           </tr>
           <tr>
             <th>配送料</th>
-              <td><%= @order.postage.to_s(:dalimited) %></td>
+              <td><%= number_with_delimiter(@order.postage) %></td>
           </tr>
           <tr>
             <th>ご請求額</th>
-              <td><%= @order.total_amount.to_s(:dalimited) %></td>
+              <td><%= number_with_delimiter(@order.total_amount) %></td>
           </tr>
         </thead>
       </table>
@@ -63,10 +63,10 @@
         <% @order_details.each do |order_detail| %>
           <tr>
             <td width="500" height="50"><%= order_detail.item.product_name %></td>
-            <td width="50" height="50"><%= order_detail.purchase_price.to_s(:dalimited) %></td>
+            <td width="50" height="50"><%= number_with_delimiter(order_detail.purchase_price) %></td>
             <td width="50" height="50"><%= order_detail.amount %></td>
             <!--subtotalはorder_detailモデルに定義してます。-->
-            <td width="100" height="50"><%= order_detail.subtotal.to_s(:dalimited) %></td>
+            <td width="100" height="50"><%= number_with_delimiter(order_detail.subtotal) %></td>
           </tr>
         <% end %>
       </tbody>

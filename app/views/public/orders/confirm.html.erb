@@ -24,11 +24,11 @@
                   <%= cart_item.item.product_name %>
               </td>
                   <!--商品単価（税込）-->
-              <td><%= cart_item.item.add_tax_price.to_s(:dalimited) %></td>
+              <td><%= number_with_delimiter(cart_item.item.add_tax_price) %></td>
                   <!--数量-->
               <td><%= cart_item.amount %></td>
                   <!--小計-->
-              <td><%= cart_item.subtotal.to_s(:dalimited) %></td>
+              <td><%= number_with_delimiter(cart_item.subtotal) %></td>
             </tr>
           <% end %>
         </tbody>
@@ -36,9 +36,9 @@
     </div>
     <div class="col-5">
       <table border="1">
-        <tr><th width="100" height="60">送料</th><td><%= @order.postage.to_s(:delimited) %></td></tr>
-        <tr><th width="100" height="60">商品合計</th><td><%= @total.round.to_s(:delimited) %></td></tr>
-        <tr><th width="100" height="60">請求金額</th><td><%= @order.total_amount.to_s(:dalimited) %></td></tr>
+        <tr><th width="100" height="60">送料</th><td><%= number_with_delimiter(@order.postage) %></td></tr>
+        <tr><th width="100" height="60">商品合計</th><td><%= number_with_delimiter(@total) %></td></tr>
+        <tr><th width="100" height="60">請求金額</th><td><%= number_with_delimiter(@order.total_amount) %></td></tr>
       </table>
     </div>
   </div>
