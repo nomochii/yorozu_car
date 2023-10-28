@@ -24,7 +24,7 @@
           <td>
             <%= link_to item.product_name, admin_item_path(item.id) %>
           </td>
-          <td><%= item.price %></td>
+          <td><%= number_with_delimiter(item.price) %>円</td>
         </tr>
       <% end %>
     </tbody>

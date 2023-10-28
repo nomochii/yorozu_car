@@ -33,9 +33,9 @@
             <% @order.order_details.each do |order_detail| %>
               <tr>
                 <td><%= order_detail.item.product_name %></td>
-                <td><%= order_detail.purchase_price %></td>
+                <td><%= number_with_delimiter(order_detail.purchase_price) %>円</td>
                 <td><%= order_detail.amount %><td/>
-                <td><%= order_detail.subtotal%></td>
+                <td><%= number_with_delimiter(order_detail.subtotal) %>円</td>
               </tr>
             <% end %>
           </tbody>
@@ -45,9 +45,9 @@
     <div class="col-4">
       <div class="admin_order_prices">
         <table>
-          <tr><th width="130" height="60">商品合計</th><td><%=  @order.total_amount - @order.postage %>円</td></tr>
-          <tr><th width="130" height="60">送料</th><td><%= @order.postage %>円</td></tr>
-          <tr><th width="130" height="60">請求金額合計</th><td><%= @order.total_amount.to_s(:dalimited) %>円</td></tr>
+          <tr><th width="130" height="60">商品合計</th><td><%=  number_with_delimiter(@order.total_amount - @order.postage) %>円</td></tr>
+          <tr><th width="130" height="60">送料</th><td><%= number_with_delimiter(@order.postage) %>円</td></tr>
+          <tr><th width="130" height="60">請求金額合計</th><td><%= number_with_delimiter(@order.total_amount) %>円</td></tr>
         </table>
       </div>
     </div>
