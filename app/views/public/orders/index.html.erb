@@ -27,7 +27,7 @@
               <p><%= order_detail.item.product_name %></p>
             <% end %>
           </td>
-          <td><%= number_with_delimiter(order.total_amount) %></td>
+          <td><%= number_with_delimiter(order.total_amount) %>円</td>
           <td><%= link_to "表示する",order_path(order.id), class: 'btn btn-primary' %></td>
         </tr>
       <% end %>

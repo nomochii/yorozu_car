@@ -21,7 +21,7 @@
           <p><%= link_to item.product_name,item_path(item.id) %></p>
         </div>
         <div class="row">
-          <p>¥<%= link_to number_with_delimiter(item.price), item_path(item.id) %></p>
+          <p><%= link_to number_with_delimiter(item.price), item_path(item.id) %>円</p>
         </div>
       </div>
     <% end %>
