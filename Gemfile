@@ -8,7 +8,7 @@ gem 'rails', '~> 6.1.7', '>= 6.1.7.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -63,3 +63,17 @@ gem 'kaminari','~> 1.2.1'
 
 # 数値に意味を持たせることができるもの
 gem "enum_help"
+
+# プロジェクトごとにファイルベースで環境変数を管理するgem
+gem 'dotenv-rails'
+group :production do
+  # MySQLを利用するために必要なgem
+  gem 'mysql2'
+end
+
+# Simple Mail Transfer Protocol の略でメールを送信するためのプロトコルです。
+gem "net-smtp"
+# POPはサーバにあるメールをパソコン等の端末にダウンロードして、端末上でメールを管理する仕組みです。
+gem "net-pop"
+# IMAPはサーバにあるメールをパソコン等の端末にはダウンロードせず、サーバ上でメールを管理する仕組みです。
+gem "net-imap"
