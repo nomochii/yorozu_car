@@ -30,7 +30,7 @@
 - [管理者：ワイヤーフレーム](https://drive.google.com/file/d/10xpMl9ZWc37UNKNFNNX9eZJThd8C-zdc/view?usp=sharing)
 - [yorozu_car:ER図](https://drive.google.com/file/d/12GS8Pmaur4SD9JVOrMLuX-3Vj6tOTDg6/view?usp=sharing)
 - [yorozu_car:テーブル定義書](https://drive.google.com/file/d/1DzTvK4EKJ7qiwceEQ-CJZ1SLZN0uGw-h/view?usp=sharing)
-- [yorozu_car:詳細設計書](https://docs.google.com/spreadsheets/d/1pIr3tv32aWqtyoKeuGgVzLDwRdKDieOTmJoB3U44OTc/edit?usp=sharing)
+- [yorozu_car:詳細設計書](https://drive.google.com/file/d/1xyB4HwwbpsYhRXzoBTxyQcy5h3ft6MgW/view?usp=sharing)
 - [yorozu_car:テスト仕様書](https://drive.google.com/file/d/1Kput9R7Kf_AwEJtSPAfYNj7XVrK3JC9u/view?usp=sharing)
 
 ## 開発環境
