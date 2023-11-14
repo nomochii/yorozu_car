@@ -24,13 +24,14 @@
 ## 設計書
 <!--テーマを設定・提出する時点では不要です-->
 
-- [顧客：画面遷移図](https://drive.google.com/file/d/10UeLhfeTYe4LfgMDJ6osGhAIR6cGA3L7/view?usp=sharing)
-- [管理者：画面遷移図](https://drive.google.com/file/d/1goOajNwijqB_FhTTRPtcVckF-vCStf7A/view?usp=sharing)
-- [顧客：ワイヤーフレーム](https://drive.google.com/file/d/1YsCLgQHuce8b_fCTBVNBLubjsb_lQVrA/view?usp=sharing)
-- [管理者：ワイヤーフレーム](https://drive.google.com/file/d/1FNziPPk9_x8Pj0EhKTn7dHzPxsHsLj0U/view?usp=sharing)
-- [yorozu_car:ER図](https://drive.google.com/file/d/1muwxeDSHMJjGG509NDAP0jyDeWh5wi1K/view?usp=sharing)
-- [yorozu_car:テーブル定義書](https://docs.google.com/spreadsheets/d/1c-Rjqw-Sw-oVNzVr5zn-Jh9HX0AxS9lK4b04drKAyPY/edit?usp=sharing)
+- [顧客：画面遷移図](https://drive.google.com/file/d/12vjeK2lhiPpNFd0GHBiAbGn40DJZeznr/view?usp=sharing)
+- [管理者：画面遷移図](https://drive.google.com/file/d/1BnWJ8WVeMx4jBr4qIRc76rT8IMCJ4I6i/view?usp=sharing)
+- [顧客：ワイヤーフレーム](https://drive.google.com/file/d/1uFYvypPeIA0P85822D3aGxJF_Vb1gtb3/view?usp=sharing)
+- [管理者：ワイヤーフレーム](https://drive.google.com/file/d/10xpMl9ZWc37UNKNFNNX9eZJThd8C-zdc/view?usp=sharing)
+- [yorozu_car:ER図](https://drive.google.com/file/d/12GS8Pmaur4SD9JVOrMLuX-3Vj6tOTDg6/view?usp=sharing)
+- [yorozu_car:テーブル定義書](https://drive.google.com/file/d/1DzTvK4EKJ7qiwceEQ-CJZ1SLZN0uGw-h/view?usp=sharing)
 - [yorozu_car:詳細設計書](https://docs.google.com/spreadsheets/d/1pIr3tv32aWqtyoKeuGgVzLDwRdKDieOTmJoB3U44OTc/edit?usp=sharing)
+- [yorozu_car:テスト仕様書](https://drive.google.com/file/d/1Kput9R7Kf_AwEJtSPAfYNj7XVrK3JC9u/view?usp=sharing)
 
 ## 開発環境
 - OS：Linux(CentOS)
